@@ -1,6 +1,4 @@
 package pl.mirotcz.groupchat;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.logging.Logger;
 
 import org.bukkit.ChatColor;
@@ -18,7 +16,6 @@ public final class GroupChat extends JavaPlugin implements Listener{
 	private static Permissions perms = null;
 	private static ConfigManager config, lang;
 	private static GroupChat instance;
-	Map<String, String> invites = new HashMap<String, String>();
 	public static String prefix;
 	private static Storage storage = null;
 	private static CommandListener commandListener = new CommandListener();

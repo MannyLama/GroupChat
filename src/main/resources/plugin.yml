@@ -1,0 +1,8 @@
+name: ${project.name}
+main: pl.mirotcz.groupchat.GroupChat
+version: ${project.version}
+author: MiroTcz
+commands:
+    groupchat:
+        usage: /<command>
+        description: Main command for GroupChat.

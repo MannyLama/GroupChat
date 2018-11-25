@@ -1,0 +1,14 @@
+MaxOwnedGroups: 3
+MaxMemberGroups: 5
+Storage:
+  type: SQLITE
+  hostname: "localhost"
+  database: "dbname"
+  user: "user"
+  password: "password"
+  port: 3306
+Sound:
+    enabled: true
+    SoundName: ENTITY.PLAYER.LEVELUP
+    Volume: 1
+    Pitch: 2.0

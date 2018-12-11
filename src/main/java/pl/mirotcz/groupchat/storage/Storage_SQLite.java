@@ -23,7 +23,6 @@ import pl.mirotcz.groupchat.Messenger;
 
 public class Storage_SQLite implements Storage{
 	
-	// Hikari version
 	HikariConfig config;
 	HikariDataSource ds;
 
@@ -52,7 +51,6 @@ public class Storage_SQLite implements Storage{
 		}
 		
 		
-		// Hikari version
 		config = new HikariConfig();
 		config.setPoolName("GroupChatSQLitePool");
 		

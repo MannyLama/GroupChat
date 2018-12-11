@@ -10,6 +10,10 @@
         <id>spigot-repo</id>
         <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
+    <repository>
+	    <id>maven2</id>
+	    <url>https://mvnrepository.com/repos/central</url>
+    </repository>
   </repositories>
   <build>
   <defaultGoal>clean install</defaultGoal>

@@ -12,6 +12,7 @@ import pl.mirotcz.groupchat.Invitations;
 import pl.mirotcz.groupchat.Messages;
 import pl.mirotcz.groupchat.Messenger;
 import pl.mirotcz.groupchat.Players;
+import pl.mirotcz.groupchat.Settings;
 import pl.mirotcz.groupchat.Utils;
 
 public class JoinCommand {
@@ -64,6 +65,10 @@ public class JoinCommand {
 	}
 	
 	private void processJoin(Player pl, Group group) {
+		if(Players.getAllPlayerGroups(pl.getUniqueId()).size() == Settings.MAX_MEMBER_GROUPS) {
+			Messenger.send(pl, Messages.INFO_MAX_MEMBER_GROUPS.replaceAll("<n>", String.valueOf(Settings.MAX_MEMBER_GROUPS)));
+			return;
+		}
 		group.messageAll(Bukkit.getConsoleSender(), Messages.INFO_PLAYER_JOINED.replaceAll("<player>", pl.getName()));
 		Messenger.send(pl, Messages.INFO_YOU_JOINED.replaceAll("<group>", group.getName()));
 		group.addMember(pl);

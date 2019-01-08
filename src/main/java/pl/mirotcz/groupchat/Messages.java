@@ -64,7 +64,6 @@ public class Messages {
 	public static String INFO_PLAYER_HAS_BEEN_BANNED;
 	public static String INFO_PLAYER_HAS_BEEN_UNBANNED;
 	public static String INFO_MAX_OWNED_GROUPS;
-	public static String INFO_MAX_MEMBER_GROUPS;
 	public static String INFO_GROUP_INFO;
 	public static String INFO_GROUP_NAME;
 	public static String INFO_GROUP_OWNER;

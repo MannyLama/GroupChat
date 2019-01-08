@@ -8,7 +8,6 @@ import java.util.UUID;
 
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
-import org.bukkit.Sound;
 import org.bukkit.SoundCategory;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -201,8 +200,7 @@ public class Group {
 					Messenger.sendCustomPrefix(pl, Messages.GROUP_PREFIX.replaceAll("<group>", this.getName()), message);
 					if(pl != sender) {
 						if(Settings.SOUND_ENABLED) {
-							Messenger.sendConsole("Sound name: " + Settings.SOUND_NAME);
-							pl.playSound(pl.getLocation(), Sound.valueOf(Settings.SOUND_NAME), SoundCategory.valueOf("PLAYERS"), Settings.SOUND_VOL, Settings.SOUND_PITCH);
+							pl.playSound(pl.getLocation(), Settings.SOUND_NAME, SoundCategory.valueOf("PLAYERS"), Settings.SOUND_VOL, Settings.SOUND_PITCH);
 						}
 					}
 				}

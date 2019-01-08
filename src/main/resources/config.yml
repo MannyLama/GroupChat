@@ -9,6 +9,6 @@ Storage:
   port: 3306
 Sound:
     enabled: true
-    SoundName: ENTITY.PLAYER.LEVELUP
+    SoundName: ENTITY_PLAYER_LEVELUP
     Volume: 1
     Pitch: 2.0

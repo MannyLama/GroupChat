@@ -13,7 +13,7 @@ import pl.mirotcz.groupchat.Utils;
 public class ListCommand {
 
 	public ListCommand(CommandSender sender, String[] args) {
-		if(GroupChat.getPermissions().hasPermission(sender, "groupchat.user")) {
+		if(GroupChat.getPermissions().hasPermission(sender, "groupchat.admin")) {
 			List<List<String>> groups = Groups.getAllGroupsChatList();
 			int number = 1;
 			if(args.length > 1) {

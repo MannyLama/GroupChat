@@ -19,7 +19,7 @@ public class SwitchCommand {
 	public SwitchCommand(CommandSender sender, String[] args) {
 		if(sender instanceof Player) {
 			Player pl = (Player) sender;
-			if(GroupChat.getPermissions().hasPermission(pl, "groupchat.user")) {
+			if(GroupChat.getPermissions().hasPermission(pl, "groupchat.admin")) {
 				if(args.length == 2) {
 					if(Utils.isInteger(args[1])) {
 						int number = Integer.valueOf(args[1]);
@@ -49,7 +49,7 @@ public class SwitchCommand {
 				}
 				else { Messenger.send(sender, Messages.INFO_TYPE_NUMBER); }
 			}
-			else { Messenger.send(sender, Messages.INFO_NO_PERMISSION); }
+			//else { Messenger.send(sender, Messages.INFO_NO_PERMISSION); }
 		}
 		else { Messenger.send(sender, Messages.INFO_YOU_NOT_PLAYER); }
 	}

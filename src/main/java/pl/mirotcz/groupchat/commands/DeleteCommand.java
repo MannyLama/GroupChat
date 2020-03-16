@@ -18,7 +18,7 @@ public class DeleteCommand {
 	public DeleteCommand(CommandSender sender, String[] args) {
 		if(sender instanceof Player) {
 			Player pl = (Player) sender;
-			if(GroupChat.getPermissions().hasPermission(pl, "groupchat.user")) {
+			if(GroupChat.getPermissions().hasPermission(pl, "groupchat.admin")) {
 				if(Players.getPlayerCurrentGroup(pl.getUniqueId()) != null) {
 					Group group = Players.getPlayerCurrentGroup(pl.getUniqueId());
 					if(group.getOwner().equals(pl.getUniqueId()) || GroupChat.getPermissions().hasPermission(pl, "groupchat.admin")) {
@@ -28,7 +28,7 @@ public class DeleteCommand {
 				}
 				else { Messenger.send(sender, Messages.INFO_YOU_NOT_MEMBER); }
 			}
-			else { Messenger.send(sender, Messages.INFO_NO_PERMISSION); }
+			//else { Messenger.send(sender, Messages.INFO_NO_PERMISSION); }
 		}
 		else { Messenger.send(sender, Messages.INFO_YOU_NOT_PLAYER); }
 	}

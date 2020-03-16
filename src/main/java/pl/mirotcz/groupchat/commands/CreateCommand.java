@@ -16,7 +16,7 @@ public class CreateCommand {
 	public CreateCommand(CommandSender sender, String[] args) {
 		if(sender instanceof Player) {
 			Player pl = (Player) sender;
-			if(GroupChat.getPermissions().hasPermission(pl, "groupchat.user")) {
+			if(GroupChat.getPermissions().hasPermission(pl, "groupchat.admin")) {
 				if(args.length > 1) {
 					String groupName = args[1];
 					if(!Groups.groupExists(groupName)) {
@@ -37,7 +37,7 @@ public class CreateCommand {
 				}
 				else {  Messenger.send(sender, Messages.INFO_ENTER_GROUP_NAME); }
 			}
-			else {  Messenger.send(sender, Messages.INFO_NO_PERMISSION); }
+			//else {  Messenger.send(sender, Messages.INFO_NO_PERMISSION); }
 		}
 		else { Messenger.send(sender, Messages.INFO_YOU_NOT_PLAYER); }
 	}

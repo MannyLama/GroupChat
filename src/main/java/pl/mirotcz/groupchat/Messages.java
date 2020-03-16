@@ -3,7 +3,7 @@ package pl.mirotcz.groupchat;
 import java.lang.reflect.Field;
 
 public class Messages {
-	
+
 	public static String PLUGIN_PREFIX;
 	public static String GROUP_PREFIX;
 	public static String MESSAGE_FORMAT;

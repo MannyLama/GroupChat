@@ -14,7 +14,7 @@ public class MyGroupsCommand {
 	public MyGroupsCommand(CommandSender sender) {
 		if(sender instanceof Player) {
 			Player pl = (Player) sender;
-			if(GroupChat.getPermissions().hasPermission(pl, "groupchat.user")) {
+			if(GroupChat.getPermissions().hasPermission(pl, "groupchat.admin")) {
 				if(Players.getAllPlayerGroups(pl.getUniqueId()).size() > 0) {
 					int number = 1;
 					for(Group group : Players.getAllPlayerGroups(pl.getUniqueId())) {
@@ -29,7 +29,7 @@ public class MyGroupsCommand {
 				}
 				else { Messenger.send(sender, Messages.INFO_NO_GROUPS); }
 			}
-			else { Messenger.send(sender, Messages.INFO_NO_PERMISSION); }
+			//else { Messenger.send(sender, Messages.INFO_NO_PERMISSION); }
 		}
 		else { Messenger.send(sender, Messages.INFO_YOU_NOT_PLAYER); }
 	}

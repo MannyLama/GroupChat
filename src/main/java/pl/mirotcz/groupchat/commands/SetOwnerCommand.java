@@ -18,7 +18,7 @@ public class SetOwnerCommand {
 	public SetOwnerCommand(CommandSender sender, String[] args) {
 		if(sender instanceof Player) {
 			Player pl = (Player) sender;
-			if(GroupChat.getPermissions().hasPermission(pl, "groupchat.user")) {
+			if(GroupChat.getPermissions().hasPermission(pl, "groupchat.admin")) {
 				if(args.length == 2) {
 					if(Players.getPlayerCurrentGroup(pl.getUniqueId()) != null) {
 						Group group = Players.getPlayerCurrentGroup(pl.getUniqueId());
@@ -44,7 +44,7 @@ public class SetOwnerCommand {
 				}
 				else { Messenger.send(sender, Messages.INFO_ENTER_PLAYER_NAME); }
 			}
-			else { Messenger.send(sender, Messages.INFO_NO_PERMISSION); }
+			//else { Messenger.send(sender, Messages.INFO_NO_PERMISSION); }
 		}
 		else { Messenger.send(sender, Messages.INFO_YOU_NOT_PLAYER); }
 	}
